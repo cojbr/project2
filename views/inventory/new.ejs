@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/albumhead %>
+    <title> <%= titleInventoryEjs %></title>
+</head>
+
+<body>
+<header>
+<div class="navbar navbar-dark bg-white box-shadow">
+    <div class="container"><p></p></div>
+    <div class="container">
+    <p>a n t i q u e s t</p>
+    </div>
+</div>
+</header>
+
+<main role="main">
+
+<section class="jumbotron text-center">
+    <div class="container">
+    <h1 class="jumbotron-heading">All Inventory in "Toronto"</h1>
+    <p class="lead text-muted">Check out your neighbourhood inventory below.</p>
+    </div>
+</section>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+    <div class="row">
+
+        <!-- create a for loop that references each item in the inventory model.  -->
+        <div class="col-md-4">
+        <div class="card mb-4 box-shadow">
+            <img class="card-img-top" data-src="imgUrlEjs[i]" alt="imgUrlEjs[i]">
+            <div class="card-body">
+            <p class="card-text">descriptionInventoryEjs[i]</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">priceInventoryEjs[i]</small>
+            </div>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</main>
+
+<footer>
+<% include ../partials/footer %>
+</footer>
+
+<% include ../partials/albumfooter %>
+</body>
+</html>
